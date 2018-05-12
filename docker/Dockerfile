@@ -13,7 +13,7 @@ WORKDIR /home
 RUN git clone https://github.com/tiliSoft/python-test.git
 RUN ls
 ENTRYPOINT ["python"]
-#CMD ["python-test/start-server.py"]
+CMD ["python-test/start-server.py"]
 
 # docker build -t pythonf:latest docker/ --no-cache
 # docker ps -a
