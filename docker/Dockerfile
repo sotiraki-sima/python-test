@@ -12,12 +12,12 @@ RUN ls
 WORKDIR /home
 RUN git clone https://github.com/tiliSoft/python-test.git
 RUN ls
-#RUN python python-test/start-server.py
+ENTRYPOINT ["python"]
+#CMD ["python-test/start-server.py"]
 
-# docker build -t image_name . 
-# docker build docker/
-# docker run -d --name container_name image_name
-# docker run -p 5000:5000 simple_flask:dockerfile python start-server.py
-# docker container ls
+# docker build -t pythonf:latest docker/ --no-cache
+# docker ps -a
+# docker stop tili; docker rm tili; docker run --name tili -p 5000:5000 pythonf python-test/start-server.py
+# docker stop pythonf
 
 
